@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+/* variables */
+:root {
+    /* colors Primary */
+    --color-p-pb:hsl(225, 100%, 94%);
+    --color-p-bb:hsl(245, 75%, 52%);
+
+    /* colors Neutral */
+    --color-n-vpb: hsl(225, 100%, 98%);
+    --color-n-desb: hsl(224, 23%, 55%); 
+    --color-n-darkb: hsl(223, 47%, 23%);
+
+    /* Shadows */
+    --box-shadow: 7px 7px 30px hsl(223, 47%, 23%, 0.2);
+
+    /* Border */
+    --border-radius: 0.8rem;
+
+    /* Font family */
+    --font-family-main: 'Red Hat Display', sans-serif;
+    --font-weight-medium: 500;
+    --font-weight-bold: 700;
+    --font-weight-black: 900;
+
+    /* Font Size */
+    --font-size-p: 16px;
+
+    /* screen sizes */
+    --width-mobile: 375px;
+    --width-desktop: 1440px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-width: var(--width-desktop);
+    background-color: var(--color-p-pb);
+    background-image: url(./images/pattern-background-desktop.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: var(--font-family-main);
+}
+
+#wrapper {
+    background-color: var(--color-n-vpb);
+    box-shadow: var(--box-shadow);
+    border-radius: var(--border-radius);
+    position: absolute;
+    width: 25%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    overflow: hidden;
+}
+
+#img__hero {
+    width: 100%;
+    object-fit: contain;
+}
+
+h1 {
+    margin: 5% 5%;
+}
+
+h1,
+strong {
+    color: var(--color-n-darkb);
+    font-weight: var(--font-weight-black);
+}
+
+p {
+    color: var(--color-n-desb);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+#info {
+    padding: 0 10%;
+    font-weight: var(--font-weight-medium);
+}
+
+#priceplan {
+    background-color: hsla(225, 100%, 94%, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    margin: 10% auto;
+    padding: 2%;
+}
+
+#icon__music {
+    margin-right: 5%;
+}
+
+#change,
+#change a {
+    font-weight: var(--font-weight-bold);
+    color: hsl(245, 75%, 52%, 0.8);
+    text-decoration: underline;
+    margin-left: 20% ;
+}
+
+#change:hover,
+#change a:hover {
+    color: hsl(245, 75%, 52%, 0.7);
+    text-decoration: none;
+}
+
+#checkout, 
+#button {
+    margin: 7% auto;
+}
+
+#button {
+    width: 80%;
+    background-color: var(--color-p-bb);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    border: none;
+    padding: 3%;
+}
+
+#button a {
+    font-weight: var(--font-weight-black);
+    color: var(--color-n-vpb);
+}
+
+#button:hover {
+    background-color: hsl(245, 75%, 52%, 0.7);
+    cursor: pointer;
+}
+
+#cancel a {
+    color:  var(--color-n-desb);
+    font-weight: var(--font-weight-black);
+}
+#cancel a:hover {
+   color: var(--color-n-darkb);
+}
+
+footer {
+    position: absolute;
+    width: 100%;
+    border-top: 2px solid rgba(81, 80, 131, 0.1);
+    text-align: center;
+    bottom: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding-top: 1%;
+}
+
+#logo {
+    width: 2%;
+    margin: 0 0.8rem;
+}
+
+.attribution p {
+    color: var(--color-n-darkb);
+}
+
+.attribution a {
+    color: var(--color-p-bb);
+    text-decoration: underline;
+}
+
+.attribution p, 
+.attribution a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.attribution a:hover {
+    text-decoration: none;
+}
+
+#challengeBy a {
+    margin: 0 0.5rem;
+}
+
+@media only screen and 
+(max-width: 600px) {
+    
+    body {
+        background-color: var(--color-p-pb);
+        background-image: none;
+    }
+
+    #wrapper {
+        width: 90%;
+    }
+
+    button {
+      height: 2%;
+    }
+
+    footer {
+        display: none;
+    }
+}
+
+@media only screen and 
+(min-width: 601px) and 
+(max-width: 1099px) {
+    
+    body {
+        background-color: var(--color-p-pb);
+        background-image: none;
+    }
+
+    #wrapper {
+        width: 50%;
+    }
+
+    button {
+      height: 2%;
+    }
+
+    footer {
+        display: none;
+    }
+}
+
+@media only screen and 
+(min-width: 1101px) and 
+(max-width: 1399px) and 
+(orientation: landscape) {
+    
+    body {
+        background-color: var(--color-p-pb);
+        background-image: none;
+    }
+
+    #wrapper {
+        width: 35%;
+    }
+
+    button {
+      height: 2%;
+    }
+
+    footer {
+        display: none;
+    }
+}
+
